@@ -48,24 +48,20 @@ fn main() {
 
 fn inspect(word: &String) {
     if word.ends_with("s") {
-        println!("The entered string is plural")
+        println!("{} is plural", word)
     } else {
-        println!("The entered string is singular")
+        println!("{} is singular", word)
     }
 }
 
 fn change(word: &mut String) {
-    if word.ends_with("s") == false {
+    if !word.ends_with("s") {
         word.push_str("s")
     } 
 }
 
 fn eat(word: String) -> bool {
-    if word.starts_with("b") && word.contains("a") {
-        return true;
-    } else {
-        return false;
-    }
+    word.starts_with("b") && word.contains("a")
 }
 
 fn add(x: &i32, y: &i32) -> i32 {
